@@ -1,27 +1,45 @@
 {
-  "name": "lucy-analytics-backend",
+  "name": "platform-analytics-backend",
   "version": "1.0.0",
-  "description": "Backend API server for Lucy Sounds Analytics Platform",
-  "main": "backend-server.js",
-  "engines": {
-    "node": "18.x",
-    "npm": "10.x"
-  },
+  "description": "Backend API server for Platform Analytics Dashboard",
+  "main": "backend-server.cjs",
+  "type": "commonjs",
   "scripts": {
-    "start": "node backend-server.js",
-    "dev": "nodemon backend-server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend-server.cjs",
+    "dev": "nodemon backend-server.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-cors": "node test-cors.js",
+    "heroku-postbuild": "echo 'Backend build complete'"
   },
+  "keywords": [
+    "analytics",
+    "api",
+    "social-media",
+    "oauth",
+    "spotify",
+    "youtube",
+    "facebook",
+    "instagram",
+    "twitter",
+    "tiktok",
+    "google-analytics",
+    "heroku"
+  ],
+  "author": "Platform Team",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
+    "@supabase/supabase-js": "^2.38.0",
+    "axios": "^1.6.0",
     "cors": "^2.8.5",
-    "axios": "^1.9.0",
-    "@supabase/supabase-js": "^2.49.4",
-    "dotenv": "^16.5.0"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "author": "Lucy Sounds",
-  "license": "ISC"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
 } 
